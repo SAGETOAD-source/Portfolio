@@ -145,6 +145,18 @@ with col2:
     st.write(profile.get("summary", ""))
     st.write(f"📍 {profile.get('location','')}  |  ✉️ {profile.get('email','')}  |  📞 {profile.get('phone','')}")
     st.write(f"[LinkedIn]({profile.get('linkedin','')})  •  [GitHub]({profile.get('github','')})")
+    
+    # Download Resume Button
+    try:
+        with open("frontend/assets/Krishnendu_Das_Resume.pdf", "rb") as pdf_file:
+            st.download_button(
+                label="📄 Download Resume",
+                data=pdf_file,
+                file_name="Krishnendu_Das_Resume.pdf",
+                mime="application/pdf"
+            )
+    except FileNotFoundError:
+        pass
 
 st.markdown("### Achievements")
 st.markdown("""
