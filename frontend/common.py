@@ -7,7 +7,7 @@ load_dotenv()
 GLOBAL_CSS = """
 <style>
 /* Hide default Streamlit elements */
-#MainMenu, footer, header {visibility: hidden;}
+#MainMenu, footer {visibility: hidden;}
 
 /* Global Theme */
 .stApp { 
